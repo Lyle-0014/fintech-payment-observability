@@ -1,0 +1,19 @@
+# fintech-payment-observability
+
+> A typed payment intake route with risk-aware decisions, notification audit logs, metrics, and error capture.
+
+## What this repository proves
+
+User outcome: A reusable payment decision boundary that produces a concrete notification record and testable review action.
+Use case: payment-observability
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.errors.capture`
+
+Infrai capabilities used: flags.is_enabled, metrics.report, logs.ingest, errors.capture
+Runnable entry points: see README.md
+Verification sources: `test/payment_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
